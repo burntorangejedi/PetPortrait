@@ -2,13 +2,17 @@ package-as: PetPortrait
 
 enable-nolib-creation: no
 
+# Add your CurseForge project ID once approved
+# You can find this in your project's URL: curseforge.com/wow/addons/petportrait/files
+# Or in the project settings after approval
+# Uncomment and add the ID below:
+# curseforge-id: YOUR_PROJECT_ID_HERE
+
 manual-changelog:
     filename: CHANGELOG.md
     markup-type: markdown
 
 ignore:
     - README.md
-    - CHANGELOG.md
     - .github
     - .gitignore
-    - logo.png
