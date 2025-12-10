@@ -1,6 +1,8 @@
 ## Interface: 120700
 ## Title: PetPortrait
-## Notes: Enlarges pet images from the Pet Journal
-## Author: Copilot
+## Notes: Enlarges pet images from the Pet Journal with an interactive 3D viewer
+## Author: burntorangejedi
+## Version: 1.0.0
 ## Dependencies: Ace3
+## SavedVariables: PetPortraitDB
 PetPortrait.lua
