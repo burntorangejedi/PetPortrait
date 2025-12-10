@@ -21,7 +21,7 @@ A World of Warcraft retail addon (version 11.2.7) that extends the Pet Journal w
 
 ## Usage
 
-1. Open the Pet Journal (default: `P` key)
+1. Open the Pet Journal (default: `Shift-P` key)
 2. Select a pet from your collection
 3. Click the "Enlarge" button next to the Summon button
 4. A window will open displaying the pet's 3D model

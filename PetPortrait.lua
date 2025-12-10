@@ -34,6 +34,43 @@ local function ShowPetPortrait(petID)
         model:SetAllPoints(true)
         container.frame:SetFrameLevel(container.frame:GetFrameLevel() + 1)
         
+        -- Track rotation state
+        local isRotating = false
+        local lastMouseX = 0
+        local currentYaw = 0
+        
+        -- Handle mouse down (right-click to start rotation)
+        model:SetScript("OnMouseDown", function(self, button)
+            if button == "RightButton" then
+                isRotating = true
+                lastMouseX = GetCursorPosition()
+            end
+        end)
+        
+        -- Handle mouse up (stop rotation)
+        model:SetScript("OnMouseUp", function(self, button)
+            if button == "RightButton" then
+                isRotating = false
+            end
+        end)
+        
+        -- Handle mouse motion during rotation
+        model:SetScript("OnUpdate", function(self)
+            if isRotating then
+                local x = GetCursorPosition()
+                local delta = (x - lastMouseX) * 0.005
+                currentYaw = currentYaw + delta
+                self:SetRotation(currentYaw)
+                lastMouseX = x
+            end
+        end)
+        
+        -- Enable mouse for the model
+        model:EnableMouse(true)
+        model:SetScript("OnMouseWheel", function(self, delta)
+            -- Optional: allow scroll wheel to zoom (if supported)
+        end)
+        
         -- Store the model for later access
         petPortraitWindow.model = model
     end
