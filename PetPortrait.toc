@@ -1,0 +1,6 @@
+## Interface: 120700
+## Title: PetPortrait
+## Notes: Enlarges pet images from the Pet Journal
+## Author: Copilot
+## Dependencies: Ace3
+PetPortrait.lua

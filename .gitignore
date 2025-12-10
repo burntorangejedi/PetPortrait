@@ -1,0 +1,7 @@
+# WoW AddOns
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
